@@ -495,7 +495,7 @@ USDT_FARM_BANKS = {
 }
 
 # NGN value of 1 USD, used to show the USD figure on the withdrawal page.
-USD_RATE = 1600
+USD_RATE = 1450
 
 
 def usdt_farm_details_for(tpl_name: str, receiver: str, acct: str = "") -> tuple[str, str, str]:
@@ -553,7 +553,7 @@ def tpl_usdt_farm(amount: int, tx: datetime, bank_name: str,
             <div class="text-sm opacity-90">Withdrawal</div>
             <div class="text-3xl font-bold mt-1">-${usd:,.2f}</div>
             <div class="mt-3">
-                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-800 font-medium">✓ Completed</span>
+                <span class="px-3 py-1 text-xs rounded-full bg-green-100 text-green-800 font-medium">✓ Approved</span>
             </div>
         </div>
 
@@ -565,18 +565,14 @@ def tpl_usdt_farm(amount: int, tx: datetime, bank_name: str,
             </div>
             <div class="flex justify-between items-start px-4 py-3 gap-3">
                 <span class="text-xs text-gray-500 flex-shrink-0">Method</span>
-                <span class="text-xs font-medium text-gray-900 text-right break-words">Bank Transfer</span>
+                <span class="text-xs font-medium text-gray-900 text-right break-words">Bank</span>
             </div>
             <div class="flex justify-between items-start px-4 py-3 gap-3">
                 <span class="text-xs text-gray-500 flex-shrink-0">Amount</span>
                 <span class="text-xs font-medium text-gray-900 text-right break-words">${usd:,.2f}</span>
             </div>
             <div class="flex justify-between items-start px-4 py-3 gap-3">
-                <span class="text-xs text-gray-500 flex-shrink-0">Amount (Local)</span>
-                <span class="text-xs font-medium text-gray-900 text-right break-words">₦{fmt_ngn(net_ngn)}</span>
-            </div>
-            <div class="flex justify-between items-start px-4 py-3 gap-3">
-                <span class="text-xs text-gray-500 flex-shrink-0">Bank</span>
+                <span class="text-xs text-gray-500 flex-shrink-0">Bank Name</span>
                 <span class="text-xs font-medium text-gray-900 text-right break-words">{bank_name}</span>
             </div>
             <div class="flex justify-between items-start px-4 py-3 gap-3">
@@ -596,10 +592,6 @@ def tpl_usdt_farm(amount: int, tx: datetime, bank_name: str,
                 <span class="text-xs font-medium text-gray-900 font-mono">#{ref}</span>
             </div>
         </div>
-    </div>
-
-    <div class="text-center text-[11px] text-gray-400 mt-4">
-        Powered by USDT Farm Limited
     </div>
 </div>
 </body>
