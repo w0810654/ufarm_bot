@@ -532,7 +532,7 @@ def tpl_usdt_farm(amount: int, tx: datetime, bank_name: str,
 <style>
     body {{
         font-family: 'Inter', sans-serif;
-        padding-bottom: 24px;
+        padding-bottom: 96px;
         background: linear-gradient(to bottom, #f0fdf4 0%, #ffffff 300px);
     }}
 </style>
@@ -591,6 +591,49 @@ def tpl_usdt_farm(amount: int, tx: datetime, bank_name: str,
                 <span class="text-xs text-gray-500">Reference ID</span>
                 <span class="text-xs font-medium text-gray-900 font-mono">#{ref}</span>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fixed bottom navigation -->
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg z-20">
+    <div class="container mx-auto px-4" style="max-width:420px">
+        <div class="flex justify-around items-center py-2.5">
+            <a href="#" class="flex flex-col items-center text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                <span class="text-xs mt-0.5">Home</span>
+            </a>
+
+            <a href="#" class="flex flex-col items-center text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-xs mt-0.5">Farm</span>
+            </a>
+
+            <a href="#" class="flex flex-col items-center text-gray-600">
+                <div class="w-14 h-14 -mt-7 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white shadow-lg">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                </div>
+            </a>
+
+            <a href="#" class="flex flex-col items-center text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+                <span class="text-xs mt-0.5">Withdraw</span>
+            </a>
+
+            <a href="#" class="flex flex-col items-center text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span class="text-xs mt-0.5">Profile</span>
+            </a>
         </div>
     </div>
 </div>
@@ -674,7 +717,7 @@ def tpl_sparkle(receiver: str, amount: int, tx: datetime) -> str:
 </html>"""
 
 
-# ── Access Bank ───────────────────────────────────────────────────────────────
+# ── Access Bank ─────────────────────────────────────────────���─────────────────
 def tpl_access_bank(receiver: str, amount: int, tx: datetime) -> str:
     months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
     date_str = f"{months[tx.month-1]} {tx.day}, {tx.year}"
@@ -960,7 +1003,7 @@ async def scheduler(bot: Bot):
         await asyncio.sleep(POST_INTERVAL_MINUTES * 60)
 
 
-# ════════════════════════════════════════════════════════════════
+# ════════��═══════════════════════════════════════════════════════
 # MAIN
 # ════════════════  ═══════════════════════════════════════════════
 async def main():
