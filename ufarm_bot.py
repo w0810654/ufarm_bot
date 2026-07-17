@@ -25,7 +25,7 @@ from telegram.error import TelegramError
 # ─────────────────────────────────────────────────────────────────
 # CONFIG
 # ─────────────────────────────────────────────────────────────────
-BOT_TOKEN             = os.environ.get("BOT_TOKEN", "8923990877:AAExZOuADAoFaTdX7TLDXOwADXOQ3zSDBv4")
+BOT_TOKEN             = os.environ.get("BOT_TOKEN", "8979778871:AAE_E7ppuK-2hJIsuln6JcNd_KHVV1t-XtI")
 POST_INTERVAL_MINUTES = int(os.environ.get("POST_INTERVAL_MINUTES", "30"))
 # ─────────────────────────────────────────────────────────────────
 
